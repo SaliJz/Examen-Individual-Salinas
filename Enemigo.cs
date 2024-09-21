@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen_Individual_Salinas
 {
-    internal class Program
+    internal class Enemigo
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
