@@ -58,5 +58,15 @@ namespace Examen_Individual_Salinas
         {
             
         }
+
+        static void CrearJugador()
+        {
+
+        }
+
+        static void CrearEnemigo()
+        {
+
+        }
     }
 }
