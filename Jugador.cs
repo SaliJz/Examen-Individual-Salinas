@@ -9,10 +9,12 @@ namespace Examen_Individual_Salinas
     class Jugador : Personaje
     {
         private int mana;
+        private List<Poder> poderes;
 
         public Jugador(string nombre, int vida, int fuerza, int mana) : base(nombre, vida, fuerza)
         {
             this.mana = mana;
+            this.poderes = new List<Poder>();
         }
 
         public int ObtenerMana()
@@ -48,5 +50,9 @@ namespace Examen_Individual_Salinas
             }
         }
 
+        public void AgregarPoder(Poder poder)
+        {
+            poderes.Add(poder);
+        }
     }
 }

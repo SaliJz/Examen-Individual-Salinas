@@ -19,6 +19,21 @@ namespace Examen_Individual_Salinas
             this.valor = valor;
         }
 
+        public string ObtenerNombre()
+        {
+            return nombre;
+        }
+
+        public string ObtenerTipo()
+        {
+            return tipo;
+        }
+
+        public int ObtenerValor()
+        {
+            return valor;
+        }
+
         public void usar(Jugador jugador)
         {
             if (tipo == "Vida")
