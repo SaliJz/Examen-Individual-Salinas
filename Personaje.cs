@@ -11,12 +11,14 @@ namespace Examen_Individual_Salinas
         private string nombre;
         private int vida;
         private int fuerza;
+        private List<Item> items;
 
         public Personaje(string nombre, int vida, int fuerza)
         {
             this.nombre = nombre;
             this.vida = vida;
             this.fuerza = fuerza;
+            this.items = new List<Item>();
         }
 
         public string ObtenerNombre()
@@ -34,10 +36,15 @@ namespace Examen_Individual_Salinas
             return fuerza;
         }
 
+        public void AgregarItem(Item item)
+        {
+            items.Add(item);
+        }
+
         public virtual void Atacar(Personaje objetivo)
         {
             Console.WriteLine($"{nombre} ataca a {objetivo.ObtenerNombre()} con {fuerza} de fuerza.");
-            objetivo.RecibirDaño(fuerza);
+        objetivo.RecibirDaño(fuerza);
         }
 
         public void RecibirDaño(int daño)

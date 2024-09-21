@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Examen_Individual_Salinas
 {
-    internal class Programa
+    class Programa
     {
         static void Main(string[] args)
         {
+            {
+            }
         }
     }
 }

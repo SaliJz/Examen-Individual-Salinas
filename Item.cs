@@ -6,7 +6,32 @@ using System.Threading.Tasks;
 
 namespace Examen_Individual_Salinas
 {
-    internal class Item
+    class Item
     {
+        private string nombre;
+        private string tipo;
+        private int valor;
+
+        public Item(string nombre, string tipo, int valor)
+        {
+            this.nombre = nombre;
+            this.tipo = tipo;
+            this.valor = valor;
+        }
+
+        public void usar(Jugador jugador)
+        {
+            if (tipo == "Vida")
+            {
+                jugador.RecibirDaño(-valor);
+                Console.WriteLine($"{nombre} usado. {jugador.ObtenerNombre()} recupera {valor} puntos de vida.");
+            }
+            else if (tipo == "Mana")
+            {
+                jugador.AumentarMana(valor);
+                Console.WriteLine($"{nombre} usado. {jugador.ObtenerNombre()} recupera {valor} puntos de mana.");
+            }
+        }
+
     }
 }
